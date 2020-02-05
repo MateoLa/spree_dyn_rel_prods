@@ -1,0 +1,44 @@
+module Spree::ProductsHelperDecorator
+  def related_products
+    if @product.respond_to?(:has_related_products?)
+      super
+    elsif @product.taxons.present?
+      max_deep = @product.taxons.map { |e| e[:depth] }.max
+      taxons = @product.taxons.where(depth: max_deep)
+byebug
+      @_related_products ||= []
+      taxons.each do |taxon|
+byebug
+        @_related_products << taxon.products.
+                              includes(
+                                :tax_category,
+                                master: [
+                                  :prices,
+                                  images: { attachment_attachment: :blob },
+                                ]
+#                              ).limit(Spree::Config[:products_per_page].div(taxons.length))                                
+                              ).limit(4)
+      end
+    else
+      return []
+    end
+  end
+end
+
+Spree::ProductsHelper.prepend Spree::ProductsHelperDecorator
+
+
+#    def related_products
+#      return [] unless @product.respond_to?(:has_related_products?) && @product.has_related_products?(:related_products)
+
+#      @_related_products ||= @product.
+#                             related_products.
+#                             includes(
+#                               :tax_category,
+#                               master: [
+#                                 :prices,
+#                                 images: { attachment_attachment: :blob },
+#                               ]
+#                             ).
+#                             limit(Spree::Config[:products_per_page])
+#    end

@@ -8,7 +8,8 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'spree_dyn_related_products'
+gem 'spree_dyn_related_products', github: 'MateoLa/spree_dyn_related_products'
+
 ```
 
 And then execute:
