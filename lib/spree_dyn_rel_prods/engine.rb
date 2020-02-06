@@ -1,6 +1,6 @@
-module SpreeDynamicRelProds
+module SpreeDynRelProds
   class Engine < Rails::Engine
-    engine_name 'spree_dynamic_rel_prods'
+    engine_name 'spree_dyn_rel_prods'
 
 		config.to_prepare do
 		  Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|

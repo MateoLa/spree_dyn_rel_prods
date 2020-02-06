@@ -1,13 +1,13 @@
 $:.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
-require "spree_dynamic_rel_prods/version"
+require "spree_dyn_rel_prods/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.platform    = Gem::Platform::RUBY
-  spec.name        = "spree_dynamic_rel_prods"
-  spec.version     = SpreeDynamicRelProds::VERSION
+  spec.name        = "spree_dyn_rel_prods"
+  spec.version     = SpreeDynRelProds::VERSION
   spec.authors     = ["VeroLa Srl."]
   spec.email       = ["mateo.laino@gmail.com"]
   spec.homepage    = "https://github.com/MateoLa"
