@@ -1,8 +1,8 @@
-//= require dyn_related_products/viewport
+//= require dynamic_rel_prods/viewport
 
 Spree.routes.product_related = function(id) { return Spree.routes.product(id) + '/related' }
 
-Spree.fetchDynRelatedProductcs = function (id, htmlContainer) {
+Spree.fetchDynamicRelatedProductcs = function (id, htmlContainer) {
   return $.ajax({
     url: Spree.routes.product_related(id)
   }).done(function (data) {
@@ -22,7 +22,7 @@ document.addEventListener('turbolinks:load', function () {
     if (!relatedProductsFetched && relatedProductsContainer.length && productId !== '') {
       $(window).on('resize scroll', function () {
         if (!relatedProductsFetched && relatedProductsContainer.isInViewport()) {
-          Spree.fetchDynRelatedProductcs(productId, relatedProductsContainer)
+          Spree.fetchDynamicRelatedProductcs(productId, relatedProductsContainer)
           relatedProductsFetched = true
         }
       })
