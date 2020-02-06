@@ -1,4 +1,4 @@
-module SpreeDynRelatedProducts
+module SpreeDynamicRelProds
   class Engine < Rails::Engine
     engine_name 'spree_dyn_related_products'
 
