@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   spec.add_dependency "rails", "~> 6.0.2", ">= 6.0.2.1"
-  spec.add_dependency "spree", "~> 4.0"
+  spec.add_dependency "spree_core", "~> 4.0", "< 6.0"
 
   spec.add_development_dependency "sqlite3"
 end
