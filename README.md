@@ -11,12 +11,11 @@ gem 'spree_dynamic_rel_prods', github: 'MateoLa/spree_dynamic_rel_prods'
 
 And then execute:
 ```bash
-$ bundle
+$ bundle install
 ```
 
-Or install it yourself as:
-```bash
-$ gem install spree_dynamic_rel_prods
+```ruby
+$ bundle exec rails g spree_dyn_rel_prods:install
 ```
 
 ## License
