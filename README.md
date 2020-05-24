@@ -5,7 +5,7 @@ Add to PDP under the "You May Also Like" section taxon based relative products.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'spree_dynamic_rel_prods', github: 'MateoLa/spree_dynamic_rel_prods'
+gem 'spree_dyn_rel_prods', github: 'MateoLa/spree_dyn_rel_prods'
 
 ```
 
