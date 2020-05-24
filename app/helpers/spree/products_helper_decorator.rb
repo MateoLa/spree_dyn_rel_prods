@@ -30,7 +30,7 @@ module Spree::ProductsHelperDecorator
   end
 
 #  TODO:
-#  The following option doen't work because the need to return an ActiveRecord Relationship.
+#  The following option doesn't work because the need to return an ActiveRecord Relationship.
 #  Can't operate with the taxons in the each block because the ActiveRecord relationships
 #  are converted to arrays.
 #
